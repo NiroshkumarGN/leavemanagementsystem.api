@@ -18,32 +18,34 @@ import lombok.NoArgsConstructor;
 
 
 public class User {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
 	@Column(name="name")
 	private String name;
 	
-	@Id
+	
 	@Column(name="email_id")
-	private String email_id;
+	private String emailId;
 	
 	@Column(name="password")
 	private String password;
 	
-	@Column(name="role")
-	private String role;
+	
 	
 	@Column(name="employee_id")
-	private String employee_id;
+	private String employeeId;
 	
 	@Column(name="branch_name")
-	private String branch_name;
+	private String branchName;
 	
 	
 	@Column(name="mobile_number")
-	private String mobile_number;
+	private String mobileNumber;
 	
 	@Column(name="date_of_birth")
-	private String date_of_birth;
+	private String dateOfBirth;
 	
 	@Column(name="gender")
 	private String gender;

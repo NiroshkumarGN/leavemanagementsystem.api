@@ -21,6 +21,9 @@ public class ApplyLeave {
     @Id
 	@Column(name="employee_id")
 	private String employee_id;
+    
+    @Column(name="number_of_days")
+    private String number_of_days;
 	
 
 	@Column(name="leave_from_date")

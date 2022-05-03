@@ -14,6 +14,7 @@ import com.leavemanagementsystem.dao.ApplyLeaveRepository;
 import com.leavemanagementsystem.model.ApplyLeave;
 
 
+
 @RestController
 	public class ApplyLeaveController {
 		
@@ -27,16 +28,16 @@ import com.leavemanagementsystem.model.ApplyLeave;
 		return user;
 	}
 		
-//	@GetMapping("/list")//list all employees
-//    public List<User>findAll(){
-//   		List<User>userlist=userRepository.findAll();
-//		return userlist;
-//	}
-//		@DeleteMapping("user/{useremail_id}")
-//		public void delete(@PathVariable("useremail_id") String useremail_id)
-//		{
-//			userRepository.deleteById(useremail_id);
-//		}
+	@GetMapping("/leavelist")//list all employees
+  public List<ApplyLeave>findAll(){
+ 		List<ApplyLeave> applyleavelist=applyleaveRepository.findAll();
+	return applyleavelist;
+}
+		@DeleteMapping("leave/delete/{employee_id}")
+	public void delete(@PathVariable("employee_id") String employeeId)
+	{
+		applyleaveRepository.deleteById(employeeId);
+	}
 ////		@PutMapping("register/{userId}")
 ////		public void update(@PathVariable("userId") String userId, @RequestBody User user)
 ////		{
