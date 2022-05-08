@@ -1,5 +1,5 @@
 package com.leavemanagementsystem.dao;
 
-public class PermissionRespository {
+public class PermissionRepository {
 
 }
