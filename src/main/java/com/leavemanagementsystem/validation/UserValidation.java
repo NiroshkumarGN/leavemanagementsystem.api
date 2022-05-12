@@ -9,7 +9,7 @@ public class UserValidation {
 		} else {
 			throw new Exception("The name cannot be empty");
 		}
-		if (user.getEmailid().contains("@") && user.getEmailid().contains(".com")) {
+		if (user.getEmailId().contains("@") && user.getEmailId().contains(".com")) {
 		} else {
 			throw new Exception("Enter a valid email ID");
 		}
@@ -17,21 +17,24 @@ public class UserValidation {
 		} else {
 			throw new Exception("Enter a strong password");
 		}
-		if (user.getBranchname() != null) {
+		if (user.getBranchName() != null) {
 		} else {
 			throw new Exception("The branchname cannot be empty");
 		}
-		if (user.getMobilenumber().length() == 10) {
+		if (user.getMobileNumber().length() == 10) {
 		} else {
 			throw new Exception("The mobile number should contain 10 digits");
 		}
-		if (user.getDateofbirth() != null ) {
+		if (user.getDateOfBirth() != null ) {
 		} else {
 			throw new Exception("The dob cannot be empty");
 		}
 		if (user.getGender() != null) {
 		} else {
 			throw new Exception("The gender cannot be empty");
+		}if (user.getRole() != null) {
+		} else {
+			throw new Exception("The role cannot be empty");
 		}
 		System.out.println("You have registerd successfully");
 	}

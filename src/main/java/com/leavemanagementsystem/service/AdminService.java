@@ -1,9 +1,9 @@
+
 package com.leavemanagementsystem.service;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 import com.leavemanagementsystem.dao.AdminRepository;
 import com.leavemanagementsystem.model.Admin;
 import com.leavemanagementsystem.validation.AdminValidation;
@@ -22,12 +22,13 @@ public class AdminService {
 		}
 	}
 
-	public String login(@RequestBody Admin admin) {
-		Optional<Admin> userObj = adminRepository.findByEmailAndPassword(admin.getEmail(), admin.getPassword());
-		if (userObj.isPresent()) {
-			return "login is successful";
+	public Admin login (Admin admin) throws Exception {
+		Optional<Admin> adminObj = adminRepository.findByEmailAndPassword(admin.getEmail(), admin.getPassword());
+		if (adminObj.isPresent()) {
+			return adminObj.get();
+
 		} else {
-			return "login is failed";
+			throw new Exception("Invalid Login Credentials");
 		}
 	}
 }

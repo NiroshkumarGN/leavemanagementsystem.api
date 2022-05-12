@@ -32,25 +32,26 @@ public class User {
 	
 	
 	@Column(name="email_id")
-	private String emailid;
+	private String emailId;
 	
 	@Column(name="password")
 	private String password;
 	
 
 	@Column(name="branch_name")
-	private String branchname;
+	private String branchName;
 	
 	
 	@Column(name="mobile_number")
-	private String mobilenumber;
+	private String mobileNumber;
 	
 	@Column(name="date_of_birth")
-	private String dateofbirth;
+	private String dateOfBirth;
 	
 	@Column(name="gender")
 	private String gender;
 
+	private String role;
 	
 
 }

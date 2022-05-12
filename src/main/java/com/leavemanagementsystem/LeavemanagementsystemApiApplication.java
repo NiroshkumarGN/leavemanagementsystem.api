@@ -8,7 +8,7 @@ public class LeavemanagementsystemApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LeavemanagementsystemApiApplication.class, args);
-		System.out.println("nirosh");
+		System.out.println("Nirosh");
 		
 	}
 

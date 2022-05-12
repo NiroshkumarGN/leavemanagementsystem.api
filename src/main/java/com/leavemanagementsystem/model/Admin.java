@@ -1,5 +1,6 @@
 package com.leavemanagementsystem.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,8 +20,12 @@ import lombok.ToString;
 public class Admin {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // AutoIncrement
+	
 	private Integer id;
+	
 	private String name;
+	
 	private String email;
+	
 	private String password;
 }

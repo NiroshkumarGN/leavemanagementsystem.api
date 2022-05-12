@@ -25,7 +25,7 @@ public class ApplyLeaveController {
 	public ResponseEntity  <String> save(@RequestBody ApplyLeave applyLeave){
 		try {
 			applyLeaveService.save(applyLeave);
-			return new ResponseEntity<String> ("success",HttpStatus.OK);
+			return new ResponseEntity<String> (HttpStatus.OK);
 		}catch(Exception e) {
 			return new ResponseEntity<String> (e.getMessage(),HttpStatus.BAD_REQUEST);
 		}
